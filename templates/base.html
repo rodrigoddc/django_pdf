@@ -1,0 +1,35 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- Bootstrap 4 css -->
+    <link rel="stylesheet" href="{% static 'core/css/bootstrap.min.css' %}">
+
+    <!-- JQuery  v3.5.1 -->
+    <script src="{% static 'core/js/jquery.min.js' %}"></script>
+
+    {% block title %}
+    {% endblock %}
+</head>
+
+<body>
+    <main>
+        <div class="container h-100">
+        {% block content %}
+        {% endblock %}
+        </div>
+    </main>
+
+
+    <!--Bootstrap 4 js -->
+    <script src="{% static 'core/js/bootstrap.min.js' %}"></script>
+    {% block scripts %}
+    {% endblock %}
+
+</body>
+</html>
